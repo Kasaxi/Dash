@@ -1,0 +1,51 @@
+Você é um desenvolvedor full-stack. Crie uma aplicação web de dashboard de vendas completa, pronta para produção, compatível com um banco de dados SQL Server, seguindo estes requisitos:
+
+1. **Banco de Dados (SQL Server)**
+   - Defina e migre um schema relacional no SQL Server incluindo as tabelas `users`, `roles`, `customers`, `products`, `orders`, `order_items` e `sales_targets`.  
+   - Implemente Row-Level Security (RLS) para que cada usuário veja apenas os dados autorizados.  
+   - Crie stored procedures e views para consultas de vendas, metas e relatórios.  
+   - Forneça scripts de migração em T-SQL e um seed de dados de exemplo.
+
+2. **Autenticação e Autorização**
+   - Use JWT e OAuth2 (e-mail/senha + provedores externos) para autenticação.  
+   - Gerencie papéis de usuário (admin, sales_manager, viewer) e aplique controle de acesso no backend.
+
+3. **Backend**
+   - Utilize Node.js com TypeScript e Express.js (ou .NET Core com C# e Entity Framework Core).  
+   - Conecte ao SQL Server via ORM (TypeORM ou Entity Framework).  
+   - Exponha APIs RESTful e endpoints de WebSocket/SignalR para notificações em tempo real.  
+   - Implemente tratamento de erros e testes automatizados para as rotas de dados.
+
+4. **Front-End**
+   - Use React com TypeScript e Next.js (SSR/SSG).  
+   - Estilize com Tailwind CSS.  
+   - Conecte-se ao backend usando fetch/axios e WebSocket para dados em tempo real.  
+   - Configure variáveis de ambiente para string de conexão com SQL Server e chaves de API.
+
+5. **Funcionalidades do Dashboard**
+   - **Cartões de KPI**: exibir vendas diárias, mensais, ano a data e ticket médio.  
+   - **Filtros de Data**: seleção de intervalos personalizados.  
+   - **Gráficos** (Recharts ou Chart.js):  
+     - Série temporal de vendas (diária/semana/mensal).  
+     - Top 10 produtos por receita.  
+     - Vendas por região.  
+     - Ranking de performance de vendedores.  
+   - **Tabela de Pedidos**: paginada, ordenável e pesquisável.  
+   - **Metas vs Realizado**: indicadores de progresso (barras ou gauges).  
+   - **Alertas e Notificações**: notificações em tempo real para metas críticas.
+
+6. **Atualizações em Tempo Real**
+   - Implemente WebSocket/SignalR para atualizar KPIs e gráficos assim que novas vendas forem registradas.
+
+7. **Deploy**
+   - Forneça instruções para implantação do backend (Azure/AWS/GCP) e frontend (Vercel/Netlify/Azure Static Web Apps).  
+   - Inclua um `README.md` com passos de setup, variáveis de ambiente e deploy.
+
+**Gerar automaticamente:**
+- Scripts de migração T-SQL para SQL Server.  
+- Estrutura de projeto backend e frontend.  
+- Componentes React para cada widget.  
+- Chamadas de API e hooks de WebSocket.  
+- Exemplo de arquivo `.env.local`.  
+- Documentação com comentários explicativos.  
+- Testes básicos de integração e unitários para funções de dados.  
